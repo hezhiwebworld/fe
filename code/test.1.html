@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../node_modules/webuploader/css/webuploader.css">
+     <script src="/node_modules/jquery/dist/jquery.js"></script>
+</head>
+<body>
+   <form>
+   <input type="file" id="upfile" multiple="multiple">
+   <input type="button" value="上传文件">
+   </form>
+  <script>
+      $(function(){
+         $('#upfile').on('change',function(){
+           alert(1)
+            $.ajax({
+              url: 'http://test.huoqishi.net/upload',
+              success: function( res ){
+                  console.log(res)
+              }
+            })
+         })
+      })
+  </script>
+</div>
+</body>
+</html>
